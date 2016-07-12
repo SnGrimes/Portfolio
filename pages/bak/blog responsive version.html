@@ -1,0 +1,21 @@
+<section class="blog" ng-controller="BlogController as blog">
+    
+    <div class="blogContent">
+        
+        <article ng-repeat="post in blog.posts | limitTo: 2">
+            <h1>{{post.title}}</h1>
+            <h4>{{post.author}}</h4>
+            <h5>{{post.createdOn | date}}</h5>
+            <p>{{post.body[0]}}</p>
+        </article>
+        
+    </div>
+</section>
+<section class="sidebar" ng-controller="BlogController as blog">
+    <p>Past Articles</p>
+    <!--
+    <ul>
+        <li ng-repeat="post in blog.posts"><a href=""/>{{post.title}}</a></li>
+    </ul>
+    -->
+</section> 

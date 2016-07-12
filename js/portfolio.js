@@ -3,29 +3,12 @@
 
 angular.module("viewApp", ['ngAnimate'])
 
-    .directive('viewer', function($timeout) {
+    .directive('viewer', function() {
   return {
-    restrict: 'E',
-    replace: true,
+    restrict: 'AE',
     scope: {
       images: '='
     },
-    link:function(scope, elem, attrs) {
-        scope.currentIndex=0;
-        
-        scope.next = function() {
-          scope.currentIndex < scope.images.length - 1 ? scope.currentIndex++ : scope.currentIndex = 0;
-        };
-        scope.prev = function() {
-          scope.currentIndex > 0 ? scope.currentIndex-- : scope.currentIndex = scope.images.length - 1;
-        };
-        scope.$watch('currentIndex', function() {
-          scope.images.forEach(function(image) {
-            image.visible = false;
-          });
-          scope.images[scope.currentIndex].visible = true;
-        });
-      },
     templateUrl: 'templates/templateurl.html'
   };
 })             
@@ -37,29 +20,13 @@ angular.module("viewApp", ['ngAnimate'])
     link: 'Testbed/Responsive site/main.html'
   }, {
     src: 'tamarah.png',
-    title:'Tamarah Esi Page - HTML, CSS, Wordpress template manipulation',
+    title:'Tamarah Esi Website - HTML, CSS, Wordpress template manipulation',
     link: 'http://www.tamarahesi.com'
     
   }];
   
-})
+});
 
-.controller('BlogController',['$http', function($http) {
-    var blog = this;
-    blog.title = "Shantia's Thoughts";
-    
-    blog.posts = {};
-    $http.get('data/posts.json').success(function(data) {
-        blog.posts = data;
-    });
-    
-    blog.post = {};
-    blog.addPost = function(){
-        blog.post.createdOn = Date.now();
-        blog.post = {};
-    };
-    
-}]);
 
 
 

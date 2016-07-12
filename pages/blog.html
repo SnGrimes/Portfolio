@@ -1,18 +1,20 @@
-<section class="blog" ng-controller="BlogController as blog">
+<section class="blog">
     
     <div class="blogContent">
         
-        <article ng-repeat="post in blog.posts | limitTo: 2">
-            <h1>{{post.title}}</h1>
-            <h4>{{post.author}}</h4>
-            <h5>{{post.createdOn | date}}</h5>
-            <p>{{post.body[0]}}</p>
+        <article>
+            <h1>Hello!</h1>
+            <h4>Shantia Grimes</h4>
+            <h5>May 31, 2016</h5>
+            <p>"Hello, this is my portfolio! I plan to improve it by adding a contact form and strengthening the backend code. Check this blog to see progress updates on my main project, the interactive D&D character generator and character sheet. Also look for updates on the SVG animation projects I'm working on."</p>
         </article>
+        
+        
         
     </div>
 </section>
-<section class="sidebar" ng-controller="BlogController as blog">
-    <p>In this blog I will talk about my ongoing projects. The main one I'm working on is a bit nerdy... An epic level character generator and calculator to be used when we get around to an epic campaign in D&D.</p>
+<section>
+    <p class="sidebar">Past Articles</p>
     <!--
     <ul>
         <li ng-repeat="post in blog.posts"><a href=""/>{{post.title}}</a></li>
