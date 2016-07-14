@@ -3,6 +3,7 @@
 <head>
 <title>PHP MYSQL API test</title>
 <script src="js/angular.js"></script>
+<script src="js/angular-sanitize.js"></script>
 <script src="js/blog.js"></script>
 </head>
 
@@ -17,8 +18,8 @@
         <tbody>
             <tr ng-repeat="post in posts">                
             <td>{{post.title}}</td>
-            <td>{{post.date}}</td>
-            <td>{{post.content}}</td>
+            <td>{{post.date | date}}</td>
+            <td>{{post.content | unsafe}}></td>
             </tr>
         </tbody>
         <tfoot></tfoot>

@@ -1,4 +1,4 @@
-var blogApp = angular.module('blog',[]);
+var blogApp = angular.module('blog',['ngSanitize']);
 
 
 blogApp.controller('GetPostController', ['$scope','$http',
@@ -9,6 +9,8 @@ blogApp.controller('GetPostController', ['$scope','$http',
                 
             });
         }]);
+
+blogApp.filter('unsafe', function($sce) {return $sce.trustAsHtml});
 
 blogApp.controller('AddCommentController', function ($scope, $http) {
                 $scope.addNewPost = function(publish) {
