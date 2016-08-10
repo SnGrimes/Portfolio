@@ -19,7 +19,7 @@
             <tr ng-repeat="post in posts">                
             <td>{{post.title}}</td>
             <td>{{post.date | date}}</td>
-            <td>{{post.content | unsafe}}></td>
+            <td ng-bind-html="post.content | unsafe"></td>
             </tr>
         </tbody>
         <tfoot></tfoot>
@@ -27,13 +27,21 @@
         
     </div>
 </section>
-<section>
+<section >
     <p class="sidebar">Past Articles</p>
-    <!--
-    <ul>
-        <li ng-repeat="post in blog.posts"><a href=""/>{{post.title}}</a></li>
-    </ul>
-    -->
+    <div ng-controller="GetPostController">
+        <ul>
+            <li ng-repeat="post in posts"><a href=""/>{{post.title}}</a></li>
+        </ul>
+    
+    </div>
+    <div ng-controller="GetJuneController">
+        <p>June</p>
+        <ul>
+            <li ng-repeat="post in posts">{{post.title}}</li>
+        </ul>
+    </div>
+    
 </section>
 
    

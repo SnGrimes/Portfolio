@@ -10,6 +10,20 @@ blogApp.controller('GetPostController', ['$scope','$http',
             });
         }]);
 
+blogApp.controller('GetPastArticleController', ['$scope', '$http',
+             function($scope, $http) {
+                $http.get('http://localhost/Portfolio/wordpress/wp-json/posts').then(function(response) {
+                    $scope.posts = response.data;
+                });                                            
+             }]);
+
+blogApp.controller('GetJuneController', ['$scope', '$http',
+             function($scope, $http) {
+                $http.get('http://localhost/Portfolio/wordpress/wp-json/posts?filter[monthnum]=6').then(function(response) {
+                    $scope.posts = response.data;
+                });                                            
+             }]);
+
 blogApp.filter('unsafe', function($sce) {return $sce.trustAsHtml});
 
 blogApp.controller('AddCommentController', function ($scope, $http) {
@@ -29,4 +43,6 @@ blogApp.controller('AddCommentController', function ($scope, $http) {
             
             
 });
+
+
    
