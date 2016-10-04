@@ -1,0 +1,12 @@
+ 
+        <table>
+        <thead>{{post.title}}</thead>
+        <tbody>
+            <tr>                
+            
+            <td>{{post.date | date}}</td>
+            <td ng-bind-html="post.content | unsafe"></td>
+            </tr>
+        </tbody>
+        <tfoot></tfoot>
+        </table>

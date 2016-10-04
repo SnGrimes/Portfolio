@@ -4,36 +4,36 @@
 <title>PHP MYSQL API test</title>
 <script src="js/angular.js"></script>
 <script src="js/angular-sanitize.js"></script>
+<script src="js/angular-route.js"></script>
 <script src="js/blog.js"></script>
+
 </head>
 
 <section class="blog">
     
-    <div class="blogContent">
+    <div class="blogContent" >
         
-   
-        <div ng-controller="GetPostController">
-        <table>
-        <thead><tr><th>Title</th><th>Date</th><th>Post</th></tr></thead>
-        <tbody>
-            <tr ng-repeat="post in posts">                
-            <td>{{post.title}}</td>
-            <td>{{post.date | date}}</td>
-            <td>{{post.content | unsafe}}></td>
-            </tr>
-        </tbody>
-        <tfoot></tfoot>
-        </table>
+   <div ng-view>
+   </div>
+        
         
     </div>
 </section>
-<section>
+<section >
     <p class="sidebar">Past Articles</p>
-    <!--
-    <ul>
-        <li ng-repeat="post in blog.posts"><a href=""/>{{post.title}}</a></li>
-    </ul>
-    -->
+    <div ng-controller="GetPostController">
+        <ul>
+            <li ng-repeat="post in posts"><a href=""/>{{post.title}}</a></li>
+        </ul>
+    
+    </div>
+    <div ng-controller="GetJuneController">
+        <p>June</p>
+        <ul>
+            <li ng-repeat="post in posts">{{post.title}}</li>
+        </ul>
+    </div>
+    
 </section>
 
    
