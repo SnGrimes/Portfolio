@@ -1,23 +1,25 @@
-<section class="blog">
-    
-    <div class="blogContent">
-        
-        <article>
-            <h1>Hello!</h1>
-            <h4>Shantia Grimes</h4>
-            <h5>May 31, 2016</h5>
-            <p>"Hello, this is my portfolio! I plan to improve it by adding a contact form and strengthening the backend code. Check this blog to see progress updates on my main project, the interactive D&D character generator and character sheet. Also look for updates on the SVG animation projects I'm working on."</p>
-        </article>
-        
-        
-        
+<section ng-controller="BlogController as blog">
+    <div class="blog">
+        <div class="blogContent" ng-show="blog.selected('blog')">  
+            <article class="articleBox" ng-repeat="post in blog.posts" ng-click="blog.selectTab($index)">
+                <h1>{{post.title}}</h1>
+                <h5>{{post.date | date}}</h5>
+                <p class="justTxt articlePad" ng-bind-html="post.content | unsafe"></p>
+            </article>
+        </div>
+        <div class="blogPost" ng-repeat="post in blog.posts" ng-show="blog.selected($index)">
+             <article class="articleBox">
+                <a class= "noDeco redBrown" href="" ng-click="blog.selectTab('blog')">Back to All Posts</a>
+                <h1>{{post.title}}</h1>
+                <h5>{{post.date | date}}</h5>
+                <p class="justTxt articlePad" ng-bind-html="post.content | unsafe"></p>
+            </article>            
+        </div>
     </div>
-</section>
-<section>
-    <p class="sidebar">Past Articles</p>
-    <!--
-    <ul>
-        <li ng-repeat="post in blog.posts"><a href=""/>{{post.title}}</a></li>
-    </ul>
-    -->
+    <div class="sidebar">
+        <p class="centerTxt">Past Articles</p>
+        <ul class="listNone centerTxt">
+            <li ng-repeat="post in blog.posts" ng-click="blog.selectTab($index)"><a class="noDeco redBrown" href=""/>{{post.title}}</a></li>
+        </ul>
+    </div>
 </section> 

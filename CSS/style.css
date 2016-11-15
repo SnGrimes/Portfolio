@@ -2,6 +2,7 @@
                                     /* Site wide CSS */
 * {
     margin: 0;
+    padding: 0;
     
 }
 
@@ -23,6 +24,33 @@ html {
     box-sizing: inherit;
 }
 
+                                    /* Reusable classes */
+                                    
+.centerTxt    {
+    text-align: center;
+}
+
+.justTxt {
+    text-align: left;
+}
+
+.flowLeft {
+    float: left;
+}
+
+.redBrown { 
+    color: #A67362;
+}
+
+.listNone {
+    list-style-type: none;
+}
+
+.noDeco {
+    text-decoration: none;
+}
+                    
+
                                     /* Main CSS*/
 
 body {
@@ -31,10 +59,8 @@ body {
     width: 90%;
     margin: 0 auto;
     box-shadow: 2px 0px 3px #D6C296, -2px 0px 3px #D6C296;
-    padding-bottom:10px;
-    min-height: 100%;
-
-
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -44,7 +70,6 @@ header {
 
 header h1 {
     color: #FFF;
-    text-align: center;
 }
 
 
@@ -56,29 +81,24 @@ nav {
 }
 
 nav ul {
-    text-align: center;
     padding: 10px;
 }
 
-nav ul li {
+nav li {
     display: inline-block;
-  text-decoration: none;
-  font: 2em 'Montserrat', Arial;
-  color: #C3DBE3;
-  border: black;
-  margin: 0 10px 0 10px;
-  text-shadow: -1px -1px #41798C, 1px -1px #41798C;
-  transition: text-shadow 1s;
+    font: 2em 'Montserrat', Arial;
+    color: #C3DBE3;
+    border: black;
+    margin: 0 10px 0 10px;
+    transition: text-shadow 1s;
 }
 
-nav ul li:hover {
-   text-shadow: 1px 1px 1px #C3DBE3, 2px 2px 1px #7DADBD, 3px 3px 1px #4F8A9E, 4px 4px 1px #41798C, 5px 5px 1px #275F73, 6px 6px 1px #265B6E, 7px 7px 12px #123E4D;
+nav li:hover {
+    text-shadow: 1px 1px 1px #C3DBE3, 2px 2px 1px #7DADBD, 3px 3px 1px #4F8A9E, 4px 4px 1px #41798C, 5px 5px 1px #275F73, 6px 6px 1px #265B6E, 7px 7px 12px #123E4D;
 }
 
 nav a, nav a:visited {
-  text-decoration: none;
-  color: #C3DBE3;
-  
+    color: #C3DBE3;  
 }
 
 
@@ -86,17 +106,11 @@ nav a, nav a:visited {
     height: 100%;
     position: relative;
     overflow: none;
+    flex: 1;
 }
 
-.wrapper:after {
-    content: "";
-    display: block;
-    
-} 
-
-
-footer, .wrapper:after {
-    height: 200px;
+header, nav, footer {
+    flex: none;
 }
 
 footer {
@@ -105,54 +119,57 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    position: absolute;
     width: 100%;
     padding:1em;
     margin: 0 auto;
 }
 
-footer p:nth-child(2) {
+.emailInfo {
     font-size: 1.5em;
     width: 40%;
 }
 
 
-footer p:nth-child(3) {
-    padding-top: 20px;
+.located {
+    /*padding-top: 20px;*/
+    top: 10%;
     
 }
 
-footer p {
+.emailInfo, .located {
     padding-left: 20px;
 }
 
 footer div {
-    width: 50%;
+    width: 70%;
 }
 .portrait{
     width: 150px;
     border: 1px groove; 
 }
 
-footer p, .portrait, footer div {
-    float: left;
+.social {
+    margin-top: 20px;
 }
 
-.social img {
-    padding-left: 10px;
+.socialIcons {
+    padding-left: 20px;
 }
 
+.email {
+    color: black;
+}
+.email:hover {
+    color: white;
+}
 
 
 
                                         /* Main Page CSS */
 
 
-/* Work */
+                                            /* Work */
 
-.landingPage {
-    
-}
 
 .landingPage:after {
     content: "";
@@ -162,28 +179,20 @@ footer p, .portrait, footer div {
 
 .intro {
     font: 1em 'Montserrat', sans-serif;
-    text-align: center;
     width: 50%;
     margin: 0 auto;
     padding-top: 2%;
     padding-bottom: 2%;
 }
     
-.skills {text-align: center;}   
+
 .skills div {
-    text-decoration: none;
-    text-align: center;
     display: inline-block;    
     padding: 10px;
     margin: 5px 5px 0 5px;
     width: 20%;
     height: 150px;
     vertical-align: top;
-
-}
-
-.skills h2, .skills h4 {
-    color: #A67362;
 }
 
 
@@ -203,20 +212,19 @@ footer p, .portrait, footer div {
 }
 
 .blogContent p {
-    text-align: left;
     font-family: 'Domine'
 }
 
 .blog article:last-child {
     margin-bottom:10%;
 }
-.blog article {
+.articleBox {
     padding: 10px;
     margin-bottom: 5%;
-    box-shadow: 0 1px 2px #ADB7BA, 0px -1px 3px #ADB7BA;   
+    box-shadow: 0 1px 3px #ADB7BA; /* 0px -1px 3px #ADB7BA;   */
 }
 
-.blog article p {
+.articlePad {
     padding: 5px 0 5px 0;
 }
 
@@ -227,34 +235,19 @@ footer p, .portrait, footer div {
     float: right;
     display: block;
     padding-top: 3%;
-    
     height: 100%
 }
-.sidebar p {
-    text-align: center;
-}
 
-.sidebar a {
-    text-decoration: none;
-}
-
-.sidebar ul li {
-    list-style-type: none;
-}
-
-    
                                           /* Contact page */
 
 .contact {
     width: 80%;
     height: 100%;  
-    margin: 0 auto;
-    
+    margin: 0 auto;   
 }
 
 .contact p {
     width: 80%;
-    text-align: center;
     padding:10px;
     margin: 0 auto;
     clear: both;
@@ -263,34 +256,29 @@ footer p, .portrait, footer div {
 
 .contact span {
     font-weight: bold;
-    text-shadow: 1px 1px #ADB7BA;
 }
 
 .skills h2, .skills h4 { /*A67362 */
-  text-shadow: 1px 1px #995A45;
   letter-spacing: 0.1em;
 }
 
-.skillList {
+.skillBlock {
     width: 70%;
     position: relative;
     left: 10%;
     padding: 20px;
-    vertical-align: top;
-    
-    
+    vertical-align: top;    
 }
-.skillList ul {
+.skillList {
     position: absolute;
     left: 0;
     top: 100px;
     width: 300px;
-    list-style-type: none;
     margin-right: 10px;
     
 }
 
-.skillList img {
+.skillImg {
     width: 50%;
     float: right;
     margin-left: 10px;
@@ -306,22 +294,20 @@ footer p, .portrait, footer div {
   display: block;
   padding: 5px;
   width: 70%; /*610px;*/
-  margin-top: 10px;
+  margin: 10px 0 10px 0;
   overflow: hidden;
 }
-
 
 .slide {
   width: 30%;
   float: right;
-  padding: 10px;
+  padding: 0 10px 0 10px;
 }
 
-.slideTitle h4 {
+.slideTitle {
     position: relative;
     bottom: 0px;
     padding: 10px 0 10px 0;
-    text-align: center;
 }
 
 .slide img {
@@ -329,21 +315,106 @@ footer p, .portrait, footer div {
     box-shadow: 0px 0px 15px #999;
 }
 
-/*                   Media Queries                  */
+                        /*                   Media Queries                  */
 
-@media screen and (max-width: 1024px) {
+@media only screen and (max-width: 480px) {
+    header {
+        height: 60%;
+    }
+        
+    header h1 {
+        font-size: 3em;
+    }
+    .intro {
+        width: 90%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }        
+    .skills div {
+        padding: 0px;
+        width: 80%;
+        height: 20%;
+        margin: 10px;
+    }
+    .skillBlock {
+        width: 100%;
+        position: relative;
+        left: 0;
+        padding: 0;        
+    }
+    .skillList {
+        position: relative;
+        top: 0;
+        margin-right: 0px;        
+    }
 
- 
+    .skillImg {
+        width: 100%;
+        margin-left: 0;
+    }
+    .contact p {
+        width: 100%;
+    }
+    footer {
+        padding:1em;
+    }    
+    footer div {
+        width: 100%;
+    }   
+    .socialIcons {
+        padding-left: 10px;
+    }
+    .slide {
+        width: 50%;
+        padding: 10px;
+    }
+    .gallery {
+        width: 100%; /*610px;*/
+    }
 }
 
-@media screen and (min-width: 1400px) {
-
+@media only screen and (min-width: 481px) and (max-width: 768px){
+    .slide {
+        width: 50%;
+        padding: 10px;
+    }
+    .gallery, footer div {
+        width: 100%;
+    }
+    .intro {
+        width: 90%
+    }
+    .skills div {
+        padding: 0px;
+        width: 80%;
+        height: 20%;
+        margin: 5px;
+    }
+    .contact p {
+        width: 100%;
+    }
+    .skillBlock {
+        width: 100%;
+        position: relative;
+        left: 0;
+        padding: 0;        
+    }
+    .skillList {
+        /*position: relative; */
+        /*top: 0;*/
+        margin-right: 0px;        
+    }    
+    .skillImg {
+        width: 50%;
+        margin-left: 0;
+    }
+  
 }
-
-@media screen and (min-width: 1900px) {
-
-
-@media screen and (min-width: 2560px) {
-
-} 
-
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .skills {
+        margin-bottom: 40px;
+    }
+    footer div {
+        width: 100%;
+    }
+}

@@ -1,6 +1,3 @@
-
-
-
 angular.module("viewApp", ['ngAnimate'])
 
     .directive('viewer', function() {
@@ -15,11 +12,11 @@ angular.module("viewApp", ['ngAnimate'])
                  
 .controller('ViewController', function($scope) {
   $scope.images = [{
-    src:'responsive.png',
+    src:'responsive.jpg',
     title: 'Responsive Page - HTML, CSS',
     link: 'Testbed/Responsive site/main.html'
   }, {
-    src: 'tamarah.png',
+    src: 'tamarah.jpg',
     title:'Tamarah Esi Website - HTML, CSS, Wordpress template manipulation',
     link: 'http://www.tamarahesi.com'
     
@@ -29,8 +26,7 @@ angular.module("viewApp", ['ngAnimate'])
 
 
 
-
-angular.module("portfolio",['ngRoute', 'viewApp'])
+angular.module("portfolio",['ngRoute', 'viewApp', 'blogApp'])
 
 .config(['$routeProvider',
     function($routeProvider) {
@@ -58,18 +54,6 @@ angular.module("portfolio",['ngRoute', 'viewApp'])
     self.message = "The app routing is working!";
     
 }])
-
-
-.controller('pastController', ['$scope', function($scope){
-    
-    
-}])
-
-.controller('contactController', ['$scope', function($scope){
-    
-    
-}]);
-
 
 
 

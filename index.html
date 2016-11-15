@@ -5,29 +5,30 @@
     <title>Shantia's Portfolio</title>
     <link rel="stylesheet" href="CSS/style.css" type="text/css" />
     <link href='https://fonts.googleapis.com/css?family=Domine:400,700|Montserrat' rel='stylesheet' type='text/css'>
-    <script src="js/angular.js"></script>
-    <script src="js/angular-route.js"></script>
-    <script src="js/portfolio.js"></script>
-     <script src="http://code.angularjs.org/1.4.7/angular-animate.min.js"></script>
-        
+    <meta name ="viewport" content="width=device-width, initial-scale=1" />
     </head>
     
     <body>
-        <header><h1>The Portfolio of Shantia Grimes</h1></header>
+        <header><h1 class="centerTxt">The Portfolio of Shantia Grimes</h1></header>
         <nav>    
-            <ul>
-                <li><a href="#/">Home</a></li>
-                <li><a href="#/blog">Blog</a></li> 
-                <li><a href="#/contact">About</a></li>
+            <ul class="centerTxt">
+                <li><a class="noDeco" href="#/">Home</a></li>
+                <li><a class="noDeco" href="#/blog">Blog</a></li> 
+                <li><a class="noDeco" href="#/contact">About</a></li>
             </ul>
                   
         </nav>
         <div class="wrapper" ng-view></div>
         <footer>
             <div>
-                <img class="portrait" src="img/Profile_cropped.jpg" alt="Profile picture">
-                <p>Need to contact me? Want a resume? shantiagrimes@gmail.com</p>
-                <p class="social">I am located in Dallas, TX. Find me on: <a href="https://www.linkedin.com/in/shantia-grimes-87332b79"><img src="img/In-2C-34px-TM.png" alt="Link to Shantia's LinkedIn profile"></a><a href="https://codepen.io/abreeman/"><img src="img/Button-Black-Small.png" alt="Link to Shantia's Codepen profile"></a><a href="https://github.com/SnGrimes"><img src="img/GitHub_Logo.png" alt="Link to Shantia's GitHub account"></a></p>
+                <img class="portrait flowLeft" src="img/Profile_cropped.jpg" alt="Profile picture">
+                <p class="flowLeft emailInfo">Need to contact me? Want a resume? <a class="email noDeco" href="mailto:shantiagrimes@gmail.com">Email me.</a></p>
+                <p class="located flowLeft">I am located in Dallas, TX. Find me on:</p>
+                <p class="social flowLeft">
+                    <a class="socialIcons" href="https://www.linkedin.com/in/shantia-grimes-87332b79"><img src="img/In-2C-34px-TM.png" alt="Link to Shantia's LinkedIn profile"></a>
+                    <a class="socialIcons" href="https://codepen.io/abreeman/"><img src="img/Button-Black-Small.png" alt="Link to Shantia's Codepen profile"></a>
+                    <a class="socialIcons" href="https://github.com/SnGrimes"><img src="img/GitHub_Logo.png" alt="Link to Shantia's GitHub account"></a>
+                </p>
             
           
             </div>
@@ -36,3 +37,10 @@
     </body>
         
 </html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/angular-sanitize.js"></script>
+     <script src="http://code.angularjs.org/1.4.7/angular-animate.min.js"></script>
