@@ -33,11 +33,7 @@ blogApp.controller('GetPostController', ['$scope','$http',
 
 blogApp.controller('GetPastArticleController', ['$scope', '$http',
              function($scope, $http) {
-<<<<<<< HEAD
-                $http.get('http://localhost/Portfolio/wordpress/wp-json/posts?filter[posts_per_page]=3').then(function(response) {
-=======
-                $http.get('http://localhost/Portfolio/wordpress/wp-json/posts').then(function(response) {
->>>>>>> ae34d783b07034c3b4c3008eaf8f298778232df2
+
                     $scope.posts = response.data;
                 });                                            
              }]);
@@ -49,16 +45,7 @@ blogApp.controller('GetJuneController', ['$scope', '$http',
                 });                                            
              }]);
 
-<<<<<<< HEAD
-blogApp.controller('GetSinglePostController', ['$scope', '$http',
-             function($scope, $http) {
-                $http.get('http://localhost/Portfolio/wordpress/wp-json/posts/' + id).then(function(response) {
-                    $scope.posts = response.data;
-                });                                            
-             }]);
 
-=======
->>>>>>> ae34d783b07034c3b4c3008eaf8f298778232df2
 blogApp.filter('unsafe', function($sce) {return $sce.trustAsHtml});
 
 blogApp.controller('AddCommentController', function ($scope, $http) {
