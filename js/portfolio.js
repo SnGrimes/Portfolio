@@ -24,8 +24,6 @@ angular.module("viewApp", ['ngAnimate'])
   
 });
 
-
-
 angular.module("portfolio",['ngRoute', 'viewApp', 'blogApp'])
 
 .config(['$routeProvider',
@@ -38,11 +36,11 @@ angular.module("portfolio",['ngRoute', 'viewApp', 'blogApp'])
             }).
             when('/blog', {
                 templateUrl: 'pages/blog.html',
-                contoller: 'pastController'
+                controller: 'BlogController'
             }).
             when('/contact', {
                 templateUrl: 'pages/contact.html',
-                contoller: 'contactController'
+                controller: 'contactController'
             }).
             otherwise ({
                 redirectTo: '/'
@@ -54,6 +52,7 @@ angular.module("portfolio",['ngRoute', 'viewApp', 'blogApp'])
     self.message = "The app routing is working!";
     
 }])
+
 
 
 

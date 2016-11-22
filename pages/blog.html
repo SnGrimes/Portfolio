@@ -1,25 +1,26 @@
 <section ng-controller="BlogController as blog">
     <div class="blog">
-        <div class="blogContent" ng-show="blog.selected('blog')">  
-            <article class="articleBox" ng-repeat="post in blog.posts" ng-click="blog.selectTab($index)">
+        <div ng-repeat="post in blog.result" ng-show="blog.selected('blog')">  
+            <article class="articleBox" ng-click="blog.selectTab($index)">
                 <h1>{{post.title}}</h1>
                 <h5>{{post.date | date}}</h5>
-                <p class="justTxt articlePad" ng-bind-html="post.content | unsafe"></p>
+                <p class="justTxt articlePad DomFont" ng-bind-html="post.content | unsafe"</p>
             </article>
         </div>
-        <div class="blogPost" ng-repeat="post in blog.posts" ng-show="blog.selected($index)">
+        <div class="blogPost" ng-repeat="post in blog.result"ng-show="blog.selected($index)">
              <article class="articleBox">
                 <a class= "noDeco redBrown" href="" ng-click="blog.selectTab('blog')">Back to All Posts</a>
                 <h1>{{post.title}}</h1>
                 <h5>{{post.date | date}}</h5>
-                <p class="justTxt articlePad" ng-bind-html="post.content | unsafe"></p>
+                <p class="justTxt articlePad DomFont" ng-bind-html="post.content | unsafe"></p>
+                
             </article>            
         </div>
     </div>
     <div class="sidebar">
         <p class="centerTxt">Past Articles</p>
         <ul class="listNone centerTxt">
-            <li ng-repeat="post in blog.posts" ng-click="blog.selectTab($index)"><a class="noDeco redBrown" href=""/>{{post.title}}</a></li>
+            <li ng-repeat="post in blog.result" ng-click="blog.selectTab($index)"><a class="noDeco redBrown" href=""/>{{post.title}}</a></li>
         </ul>
     </div>
 </section> 
