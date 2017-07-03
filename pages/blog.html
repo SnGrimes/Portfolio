@@ -1,4 +1,4 @@
-<section ng-controller="BlogController as blog">
+<section class="blogContainer" ng-controller="BlogController as blog">
     <div class="blog">
         <div ng-repeat="post in blog.result" ng-show="blog.selected('blog')">  
             <article class="articleBox" ng-click="blog.selectTab($index)">
