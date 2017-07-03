@@ -20,18 +20,42 @@
         </nav>
         <div class="wrapper" ng-view></div>
         <footer>
-            <div>
-                <img class="portrait flowLeft" src="img/Profile_cropped.jpg" alt="Profile picture">
-                <p class="flowLeft emailInfo">Need to contact me? Want a resume? <a class="email noDeco" href="mailto:shantiagrimes@gmail.com">Email me.</a></p>
-                <p class="located flowLeft">I am located in Dallas, TX. Find me on:</p>
-                <p class="social flowLeft">
-                    <a class="socialIcons" href="https://www.linkedin.com/in/shantia-grimes-87332b79"><img src="img/In-2C-34px-TM.png" alt="Link to Shantia's LinkedIn profile"></a>
-                    <a class="socialIcons" href="https://codepen.io/abreeman/"><img src="img/Button-Black-Small.png" alt="Link to Shantia's Codepen profile"></a>
-                    <a class="socialIcons" href="https://github.com/SnGrimes"><img src="img/GitHub_Logo.png" alt="Link to Shantia's GitHub account"></a>
-                </p>
-            
-          
+            <div class="social">
+                <div class="portraitContainer">
+                <img class="portrait" src="img/Profile_cropped.jpg" alt="Profile picture">
+                </div>
+                <div class="emailSocial">
+                    <p>Need to contact me? Want a resume? <a class="email" href="mailto:shantiagrimes@gmail.com">Email me.</a> <br> I am located in Dallas, TX. Find me on:</p>
+                    <div class="socialIcons">
+                        <a href="https://www.linkedin.com/in/shantia-grimes-87332b79"><img src="img/In-2C-34px-TM.png" alt="Link to Shantia's LinkedIn profile"></a>
+                        <a href="https://codepen.io/abreeman/"><img src="img/Button-Black-Small.png" alt="Link to Shantia's Codepen profile"></a>
+                        <a href="https://github.com/SnGrimes"><img src="img/GitHub_Logo.png" alt="Link to Shantia's GitHub account"></a>       
+                    </div>
+                </div>
+                    <form class="contactForm" method="POST" action="formspree.io/shantiagrimes@gmail.com">
+                        <div class="contactElement">
+                            <label for="contactName" class="contactLabel">Name:</label> 
+                            <input type="text" class="contactField" id="contactName"name="name" placeholder="Your Name" require>
+                        </div>
+                        <div class="contactElement">
+                            <label for="contactSubject" class="contactLabel">Subject:</label> 
+                            <input type="text" class="contactField" id="contactSubject" name="_subject" placeholder="Hello" require>
+                        </div>
+                        <div class="contactElement">
+                            <label for id="contactEmail" class="contactLabel">Email:</label> 
+                            <input type="email" class="contactField" id="contactEmail" name="email" placeholder="email@google.com" require>
+                        </div>
+                        <div class="contactElement">
+                            <label for id="contactMessage" class="contactLabel">Message:</label> 
+                            <textarea name="message" class="contactField contactMessage" id="contactMessage" placeholder="Type your message" required></textarea>
+                        </div>
+                        <div class="contactSend">       
+                            <button class="contactButton" type="submit">Send</button>
+                        </div>
+                    </form>
+                    
             </div>
+            
         </footer>
         
     </body>
