@@ -12,33 +12,11 @@ const About = () => (
       <div className="nine columns main-col">
         <h2>About Me</h2>
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi architecto beatae vitae dicta
-          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-          qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
-          dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
-          quia non numquam eius modi tempora incidunt ut labore et dolore magnam
-          aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
-          exercitationem ullam corporis suscipit laboriosam.
+        I am seeking an entry level position as a frontend web developer. I have several years' experience with HTML and CSS and have a passion for web code. I graduated cum laude with a degree in Arts and Technology from The University of Texas at Dallas. After graduation and discovering that the movie and videogame animation fields no longer appealed to me, I decided to learn as much as possible about web development. Since 2004 I have become proficient with web coding and created a websites using HTML, CSS and Javascript. I am passionate about the Internet and would like to contribute to it.
+        I enjoy solving problems. I always look for faster, more efficient methods to reach the best results and I bring this mindset to my development projects. I look at problems from different viewpoints and consider several approaches. The more details I can learn about a language or browser the better.  
+        My strengths lie in coding, especially frontend code. Recreating mock-up designs in HTML/CSS is easy for me. I also actively seek new knowledge. After discovering a Javascript-based animation library called Greensock, I plan to learn as much as possible about it because of my love for the art of animation.
         </p>
         <div className="row">
-          <div className="columns contact-details">
-            <h2>Contact Details</h2>
-            <p className="address">
-              <span>Jonathan Doe</span>
-              <br />
-              <span>
-                1600 Amphitheatre Parkway
-                <br /> Mountain View, CA 94043 US
-              </span>
-              <br />
-              <span>(123)456-7890</span>
-              <br />
-              <span>anyone@website.com</span>
-            </p>
-          </div>
           <div className="columns download">
             <p>
               <a href="#" className="button">
