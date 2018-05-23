@@ -12,10 +12,8 @@ html, body {
 }
 
 
-html {
-    background: #EDFAF0 url('../img/dotted_background.png') repeat-x;   
+html { 
     box-sizing: border-box;
-    height: 100%;
 }
 
 *,
@@ -32,10 +30,6 @@ html {
 
 .justTxt {
     text-align: left;
-}
-
-.flowLeft {
-    float: left;
 }
 
 .redBrown { 
@@ -58,16 +52,15 @@ html {
 body {
     position: relative;
     background-color: #FAF6ED;
-    width: 90%;
-    margin: 0 auto;
-    box-shadow: 2px 0px 3px #D6C296, -2px 0px 3px #D6C296;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
 }
 
 header {
     height: 40%;
     background:#6295A6;
+    flex: 1 1 auto;
 }
 
 header h1 {
@@ -80,6 +73,7 @@ nav {
     background:#6295A6;
     padding-top: 5px;
     padding-bottom: 5px;   
+    flex: 2 1 auto;
 }
 
 nav ul {
@@ -105,64 +99,90 @@ nav a, nav a:visited {
 
 
 .wrapper {
-    height: 100%;
     position: relative;
-    overflow: none;
-    flex: 1;
+    flex: 2 2 auto;
 }
 
-header, nav, footer {
-    flex: none;
-}
 
 footer {
     background-color: #6295A6;
     box-shadow: .5px .5px #306475, -.5px -.5px #507D8C;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
     padding:1em;
-    margin: 0 auto;
+    flex: 1 1 auto;
+    display: flex;
 }
 
-.emailInfo {
-    font-size: 1.5em;
-    width: 40%;
+.contactForm {
+    flex: 2 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.contactElement, .contactSend {
+    display: flex;
+    text-align: center;
+    align-items: baseline;
+}
+.contactLabel {
+    flex: 1;
+}
+.contactField {
+    flex: 2;
+}
+.contactField, .contactLabel {
+    padding: 5px 5px;
+}
+.contactMessage {
+    height: 100px;
+    resize: none;
+}
+.contactSend {
+    align-self: center;
+}
+.contactButton {
+    margin-top: 10px;
+    padding: 15px 30px;
+    transition: .3s;
+    background-color: white;
+    color: black;
+    will-change: background-color, color;
+}
+.contactButton:hover {
+    background-color: #A67362;
+    color: white;
+}
+.social {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    flex-basis: auto;
+    width:100%;
+}
+.emailSocial {
+    flex: 1 1 auto;
+    padding-left: 10px;
 }
 
-
-.located {
-    /*padding-top: 20px;*/
-    top: 10%;
-    
-}
-
-.emailInfo, .located {
-    padding-left: 20px;
-}
-
-footer div {
-    width: 70%;
-}
 .portrait{
-    width: 150px;
+    width: 200px;
     border: 1px groove; 
 }
-
-.social {
-    margin-top: 20px;
+.portraitContainer {
+    flex: 1 0 auto;
 }
 
 .socialIcons {
-    padding-left: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    width: 300px;
+    flex: 1 1 30%;
 }
 
 .email {
-    color: black;
+    color: white;
 }
 .email:hover {
-    color: white;
+    color: black;
 }
 
 
@@ -173,78 +193,77 @@ footer div {
                                             /* Work */
 
 
-.landingPage:after {
-    content: "";
-    display: block;
-    
+.landingPage {
+    display: flex;
+    flex-flow: column nowrap;
+    flex:2 1 auto;
 }
+
 
 .intro {
     font: 1em 'Montserrat', sans-serif;
-    width: 50%;
-    margin: 0 auto;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding:20px;
+    text-align: center;
 }
     
-
-.skills div {
-    display: inline-block;    
-    padding: 10px;
-    margin: 5px 5px 0 5px;
-    width: 20%;
-    height: 150px;
-    vertical-align: top;
+.skills {
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: space-between;
+    padding: 50px 0 50px 0;
 }
 
+.skills div {
+    padding: 10px;
+    margin: 5px 5px 0 5px;
+} 
+.skillTitle {
+    align-self: center;
+}
 
                                     /* Blog page */
+
+.blogContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 5px;
+}
 .blog {
-    width:65%;
-    margin: 1%;
-    float: left;
-    display:block;
-    height: 100%;
-    position: relative;
-    top: 0;
-    padding-top: 5%;
+    order: 1;
+    flex: 2 1 70%; 
 }
 
 .blog article:last-child {
-    margin-bottom:10%;
+    margin-bottom: 10px;
 }
 .articleBox {
     padding: 10px;
-    margin-bottom: 5%;
+    margin-bottom: 10px;
     box-shadow: 0 1px 3px #ADB7BA; /* 0px -1px 3px #ADB7BA;   */
 }
 
 .articlePad {
     padding: 5px 0 5px 0;
 }
-
+.articleSpacing {
+    line-height: 1.5;
+}
 
 .sidebar {
-    width: 30%;
-    margin: 1%;
-    float: right;
-    display: block;
-    padding-top: 3%;
-    height: 100%
+    order: 2;
+    flex: 1 1 30%;
 }
 
                                           /* Contact page */
 
 .contact {
-    width: 80%;
-    height: 100%;  
-    margin: 0 auto;   
+    height: 100%;   
 }
 
 .contact p {
-    width: 80%;
+    width: 100%;
     padding:10px;
-    margin: 0 auto;
     clear: both;
     font: 1em 'Montserrat', serif;
 }
@@ -258,25 +277,22 @@ footer div {
 }
 
 .skillBlock {
-    width: 70%;
-    position: relative;
-    left: 10%;
-    padding: 20px;
-    vertical-align: top;    
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: flex-start;
+    padding: 100px 0 100px 0;
 }
 .skillList {
-    position: absolute;
-    left: 0;
-    top: 100px;
-    width: 300px;
-    margin-right: 10px;
-    
+    padding-left: 50px;
+    flex: 1 1 auto;
+    order: 1;
+    align-self: center;
 }
 
 .skillImg {
-    width: 50%;
-    float: right;
-    margin-left: 10px;
+    padding-right: 30px;
+    flex: 1 1 auto;
+    order:2;
 }
 
 
@@ -284,25 +300,17 @@ footer div {
 
 
 .gallery {
-  position: relative;
-  top: 10px;
-  display: block;
-  padding: 5px;
-  width: 70%; /*610px;*/
-  margin: 10px 0 10px 0;
-  overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px 0 100px 0;
 }
 
 .slide {
+  flex: 0 1 auto;
   width: 30%;
-  float: right;
   padding: 0 10px 0 10px;
-}
-
-.slideTitle {
-    position: relative;
-    bottom: 0px;
-    padding: 10px 0 10px 0;
 }
 
 .slide img {
@@ -320,44 +328,11 @@ footer div {
     header h1 {
         font-size: 3em;
     }
-    .intro {
-        width: 90%;
-        padding-top: 2%;
-        padding-bottom: 2%;
-    }        
-    .skills div {
-        padding: 0px;
-        width: 80%;
-        height: 20%;
-        margin: 10px;
+    .skills {
+        flex-flow: row wrap;
     }
-    .skillBlock {
-        width: 100%;
-        position: relative;
-        left: 0;
-        padding: 0;        
-    }
-    .skillList {
-        position: relative;
-        top: 0;
-        margin-right: 0px;        
-    }
-
     .skillImg {
-        width: 100%;
-        margin-left: 0;
-    }
-    .contact p {
-        width: 100%;
-    }
-    footer {
-        padding:1em;
-    }    
-    footer div {
-        width: 100%;
-    }   
-    .socialIcons {
-        padding-left: 10px;
+        display: none;
     }
     .slide {
         width: 50%;
@@ -366,50 +341,64 @@ footer div {
     .gallery {
         width: 100%; /*610px;*/
     }
+    .blogContainer {
+        flex-flow: row wrap;
+    }
+    .blog {
+        flex: 2 1 auto; 
+    }
+    footer {
+        font-size: .8em;
+    }    
+    .portraitContainer {
+        align-self: center;
+    }
+    .social {
+        flex-flow: column wrap;
+        justify-content: space-around;
+    }
+    .contactElement {
+        text-align: center;
+        padding-top: 10px;
+    }
+    .blogContainer, .portraitContainer, .contactForm, .socialIcons {
+        padding-top: 15px;
+    }
+
 }
 
-@media only screen and (min-width: 481px) and (max-width: 768px){
-    .slide {
-        width: 50%;
-        padding: 10px;
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .contactForm {
+        flex: 3 2 auto;
     }
-    .gallery, footer div {
-        width: 100%;
+    .contactField {
+        flex: 2;
     }
-    .intro {
-        width: 90%
+    .contactSend {
+        align-self: flex-end;
     }
-    .skills div {
-        padding: 0px;
-        width: 80%;
-        height: 20%;
-        margin: 5px;
+    .portraitContainer {
+        flex: 1 0 30%;
+        align-self: flex-start;
     }
-    .contact p {
-        width: 100%;
+    .emailSocial {
+        flex: 2 1 30%;
+        padding-left: 0;
     }
-    .skillBlock {
-        width: 100%;
-        position: relative;
-        left: 0;
-        padding: 0;        
-    }
-    .skillList {
-        /*position: relative; */
-        /*top: 0;*/
-        margin-right: 0px;        
-    }    
-    .skillImg {
-        width: 50%;
-        margin-left: 0;
-    }
-  
+    .social {
+        flex-flow: column wrap;
 }
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-    .skills {
-        margin-bottom: 40px;
+    .socialIcons {
+        flex-flow: row nowrap;
+        flex: 1 1 40%;
     }
-    footer div {
-        width: 100%;
+}
+
+@media only screen and (min-width: 1440px) {
+    body, html {
+        font-size: 1.2em;
+    }
+    .skillImg img {
+        width: 60%;
     }
 }

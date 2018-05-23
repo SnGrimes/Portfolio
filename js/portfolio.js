@@ -12,15 +12,19 @@ angular.module("viewApp", ['ngAnimate'])
                  
 .controller('ViewController', function($scope) {
   $scope.images = [{
-    src:'responsive.jpg',
+    src:'responsive.png',
     title: 'Responsive Page - HTML, CSS',
     link: 'Testbed/Responsive site/main.html'
   }, {
-    src: 'tamarah.jpg',
+    src: 'tamarah.png',
     title:'Tamarah Esi Website - HTML, CSS, Wordpress template manipulation',
     link: 'http://www.tamarahesi.com'
-    
-  }];
+  },
+   {
+    src: 'weatherapp.png',
+    title: 'Weather Application - HTML, CSS, JS, PHP, Openweathermap API',
+    link: 'Testbed/Weatherapp/index.html'
+   }];
   
 });
 

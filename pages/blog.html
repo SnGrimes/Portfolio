@@ -1,10 +1,10 @@
-<section ng-controller="BlogController as blog">
+<section class="blogContainer" ng-controller="BlogController as blog">
     <div class="blog">
         <div ng-repeat="post in blog.result" ng-show="blog.selected('blog')">  
             <article class="articleBox" ng-click="blog.selectTab($index)">
                 <h1>{{post.title}}</h1>
                 <h5>{{post.date | date}}</h5>
-                <p class="justTxt articlePad DomFont" ng-bind-html="post.content | unsafe"</p>
+                <p class="justTxt articlePad DomFont articleSpacing" ng-bind-html="post.content | unsafe"</p>
             </article>
         </div>
         <div class="blogPost" ng-repeat="post in blog.result"ng-show="blog.selected($index)">
@@ -12,7 +12,7 @@
                 <a class= "noDeco redBrown" href="" ng-click="blog.selectTab('blog')">Back to All Posts</a>
                 <h1>{{post.title}}</h1>
                 <h5>{{post.date | date}}</h5>
-                <p class="justTxt articlePad DomFont" ng-bind-html="post.content | unsafe"></p>
+                <p class="justTxt articlePad DomFont articleSpacing" ng-bind-html="post.content | unsafe"></p>
                 
             </article>            
         </div>

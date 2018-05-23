@@ -1,0 +1,415 @@
+
+                                    /* Site wide CSS */
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+}
+
+
+html {
+    background: #EDFAF0 url('../img/dotted_background.png') repeat-x;   
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+                                    /* Reusable classes */
+                                    
+.centerTxt    {
+    text-align: center;
+}
+
+.justTxt {
+    text-align: left;
+}
+
+.flowLeft {
+    float: left;
+}
+
+.redBrown { 
+    color: #A67362;
+}
+
+.listNone {
+    list-style-type: none;
+}
+
+.noDeco {
+    text-decoration: none;
+}
+                    
+.DomFont {
+    font-family: 'Domine';
+}
+                                    /* Main CSS*/
+
+body {
+    position: relative;
+    background-color: #FAF6ED;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 2px 0px 3px #D6C296, -2px 0px 3px #D6C296;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 40%;
+    background:#6295A6;
+}
+
+header h1 {
+    color: #FFF;
+}
+
+
+nav {
+    height: 20%;
+    background:#6295A6;
+    padding-top: 5px;
+    padding-bottom: 5px;   
+}
+
+nav ul {
+    padding: 10px;
+}
+
+nav li {
+    display: inline-block;
+    font: 2em 'Montserrat', Arial;
+    color: #C3DBE3;
+    border: black;
+    margin: 0 10px 0 10px;
+    transition: text-shadow 1s;
+}
+
+nav li:hover {
+    text-shadow: 1px 1px 1px #C3DBE3, 2px 2px 1px #7DADBD, 3px 3px 1px #4F8A9E, 4px 4px 1px #41798C, 5px 5px 1px #275F73, 6px 6px 1px #265B6E, 7px 7px 12px #123E4D;
+}
+
+nav a, nav a:visited {
+    color: #C3DBE3;  
+}
+
+
+.wrapper {
+    height: 100%;
+    position: relative;
+    overflow: none;
+    flex: 1;
+}
+
+header, nav, footer {
+    flex: none;
+}
+
+footer {
+    background-color: #6295A6;
+    box-shadow: .5px .5px #306475, -.5px -.5px #507D8C;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding:1em;
+    margin: 0 auto;
+}
+
+.emailInfo {
+    font-size: 1.5em;
+    width: 40%;
+}
+
+
+.located {
+    /*padding-top: 20px;*/
+    top: 10%;
+    
+}
+
+.emailInfo, .located {
+    padding-left: 20px;
+}
+
+footer div {
+    width: 70%;
+}
+.portrait{
+    width: 150px;
+    border: 1px groove; 
+}
+
+.social {
+    margin-top: 20px;
+}
+
+.socialIcons {
+    padding-left: 20px;
+}
+
+.email {
+    color: black;
+}
+.email:hover {
+    color: white;
+}
+
+
+
+                                        /* Main Page CSS */
+
+
+                                            /* Work */
+
+
+.landingPage:after {
+    content: "";
+    display: block;
+    
+}
+
+.intro {
+    font: 1em 'Montserrat', sans-serif;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+    
+
+.skills div {
+    display: inline-block;    
+    padding: 10px;
+    margin: 5px 5px 0 5px;
+    width: 20%;
+    height: 150px;
+    vertical-align: top;
+}
+
+
+                                    /* Blog page */
+.blog {
+    width:65%;
+    margin: 1%;
+    float: left;
+    display:block;
+    height: 100%;
+    position: relative;
+    top: 0;
+    padding-top: 5%;
+}
+
+.blog article:last-child {
+    margin-bottom:10%;
+}
+.articleBox {
+    padding: 10px;
+    margin-bottom: 5%;
+    box-shadow: 0 1px 3px #ADB7BA; /* 0px -1px 3px #ADB7BA;   */
+}
+
+.articlePad {
+    padding: 5px 0 5px 0;
+}
+
+
+.sidebar {
+    width: 30%;
+    margin: 1%;
+    float: right;
+    display: block;
+    padding-top: 3%;
+    height: 100%
+}
+
+                                          /* Contact page */
+
+.contact {
+    width: 80%;
+    height: 100%;  
+    margin: 0 auto;   
+}
+
+.contact p {
+    width: 80%;
+    padding:10px;
+    margin: 0 auto;
+    clear: both;
+    font: 1em 'Montserrat', serif;
+}
+
+.contact span {
+    font-weight: bold;
+}
+
+.skills h2, .skills h4 { /*A67362 */
+  letter-spacing: 0.1em;
+}
+
+.skillBlock {
+    width: 70%;
+    position: relative;
+    left: 10%;
+    padding: 20px;
+    vertical-align: top;    
+}
+.skillList {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 300px;
+    margin-right: 10px;
+    
+}
+
+.skillImg {
+    width: 50%;
+    float: right;
+    margin-left: 10px;
+}
+
+
+                                    /*Image Gallery Widget */
+
+
+.gallery {
+  position: relative;
+  top: 10px;
+  display: block;
+  padding: 5px;
+  width: 70%; /*610px;*/
+  margin: 10px 0 10px 0;
+  overflow: hidden;
+}
+
+.slide {
+  width: 30%;
+  float: right;
+  padding: 0 10px 0 10px;
+}
+
+.slideTitle {
+    position: relative;
+    bottom: 0px;
+    padding: 10px 0 10px 0;
+}
+
+.slide img {
+    width: 100%;
+    box-shadow: 1px 2px 2px #999, -1px -1px 2px #999;
+}
+
+                        /*                   Media Queries                  */
+
+@media only screen and (max-width: 480px) {
+    header {
+        height: 60%;
+    }
+        
+    header h1 {
+        font-size: 3em;
+    }
+    .intro {
+        width: 90%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }        
+    .skills div {
+        padding: 0px;
+        width: 80%;
+        height: 20%;
+        margin: 10px;
+    }
+    .skillBlock {
+        width: 100%;
+        position: relative;
+        left: 0;
+        padding: 0;        
+    }
+    .skillList {
+        position: relative;
+        top: 0;
+        margin-right: 0px;        
+    }
+
+    .skillImg {
+        width: 100%;
+        margin-left: 0;
+    }
+    .contact p {
+        width: 100%;
+    }
+    footer {
+        padding:1em;
+    }    
+    footer div {
+        width: 100%;
+    }   
+    .socialIcons {
+        padding-left: 10px;
+    }
+    .slide {
+        width: 50%;
+        padding: 10px;
+    }
+    .gallery {
+        width: 100%; /*610px;*/
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px){
+    .slide {
+        width: 50%;
+        padding: 10px;
+    }
+    .gallery, footer div {
+        width: 100%;
+    }
+    .intro {
+        width: 90%
+    }
+    .skills div {
+        padding: 0px;
+        width: 80%;
+        height: 20%;
+        margin: 5px;
+    }
+    .contact p {
+        width: 100%;
+    }
+    .skillBlock {
+        width: 100%;
+        position: relative;
+        left: 0;
+        padding: 0;        
+    }
+    .skillList {
+        /*position: relative; */
+        /*top: 0;*/
+        margin-right: 0px;        
+    }    
+    .skillImg {
+        width: 50%;
+        margin-left: 0;
+    }
+  
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .skills {
+        margin-bottom: 40px;
+    }
+    footer div {
+        width: 100%;
+    }
+}
