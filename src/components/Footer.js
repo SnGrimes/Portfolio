@@ -4,26 +4,12 @@ import { FaChevronCircleUp } from "react-icons/lib/fa";
 
 const Footer = () => (
   <footer id="footer" className="footer__wrapper">
-    <div className="row">
-      <div className="twelve columns">
+    <div>
+      <div>
         <SocialLinks />
-
-        <ul className="copyright">
-          <li>&copy; Copyright 2018 CeeVee</li>
-          <li>
-            Design by{" "}
-            <a title="Styleshout" href="http://www.styleshout.com/">
-              Styleshout
-            </a>
-          </li>
-          <li>
-            Developed in React ⚛️ by{" "}
-            <a href="http://www.amanhimself.me">Aman Mittal</a>
-          </li>
-        </ul>
       </div>
 
-      <div id="go-top">
+      <div id="go-top" className="footer__go-top">
         <a className="smoothscroll" title="Back to Top" href="#home">
           <FaChevronCircleUp />
         </a>

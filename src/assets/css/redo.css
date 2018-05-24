@@ -45,15 +45,15 @@ strong, b { font: 15px/30px 'opensans-bold', sans-serif; }
 small { font-size: 11px; line-height: inherit; }
 
 /* Links */
-a, a:visited {
+/* a, a:visited {
   text-decoration: none;
   outline: 0;
   color: #11ABB0;
 
   transition: color .3s ease-in-out;
-}
-a:hover, a:focus { color: #313131; }
-p a, p a:visited { line-height: inherit; }
+} */
+/* a:hover, a:focus { color: #313131; }
+p a, p a:visited { line-height: inherit; } */
 
 /* List items */
 ul { 
@@ -107,12 +107,18 @@ button
 
 .nav__full {
   display: grid;
-  grid-template-columns: repeat(3, 100px) 10%;
+  grid-template-columns: repeat(3, 120px) 10%;
+  justify-content: center;
 }
 
-.nav__link:hover {
-  background-color: #11ABB0;
+.nav__full-item {
+  padding: 8px 13px;
+  line-height: 32px;
+  text-decoration: none;
+  text-align: left;
   color: #fff;
+
+  transition: color 0.2s ease-in-out;
 }
 
 .nav__link--current {
@@ -151,6 +157,26 @@ header {
   background-size: cover !important;
   text-align: center;
   overflow: hidden;
+}
+.scrolldown a {
+position: absolute;
+bottom: 30px;
+left: 50%;
+margin-left: -29px;
+color: #fff;
+display: block;
+height: 42px;
+width: 42px;
+font-size: 42px;
+line-height: 42px;
+color: #fff;
+border-radius: 100%;
+
+transition: all 0.3s ease-in-out;
+}
+
+.scrolldown a:hover {
+  color: #11abb0;
 }
 
 .banner {
@@ -211,16 +237,22 @@ header .social li a:hover {
 }
 /* About Component */
 .about__wrapper {
+  background: #2b2b2b;
+  padding-top: 96px;
+  padding-bottom: 66px;
   grid-area: about;
   display: grid;
-  grid-template-columns: repeat(2, 50%) 100px;
+  grid-template-columns: 20% 40%;
+  grid-column-gap: 30px;
   grid-template-rows: auto;
+  justify-content: center;
 }
 .about__column-1  {
   grid-column: 1;
 }
 .about__column-2 {
   grid-column: 2;
+  padding-right: 5%;
 }
 .about__profile-pic {
   position: relative;
@@ -246,8 +278,10 @@ header .social li a:hover {
 }
 .portfolio__items {
   display: grid;
+  justify-content: center;
   grid-column-gap: 30px;
   grid-template-columns: repeat(4, 20%);
+  margin-bottom: 36px;
 }
 .portfolio__wrapper h1 {
   font: 15px/24px "opensans-semibold", sans-serif;
@@ -257,31 +291,28 @@ header .social li a:hover {
   margin-bottom: 48px;
   color: #95a3a3;
 }
-.portfolio__item img {
-  height: auto;
-}
-.portfolio__item, .portfolio__item-wrap {
-  background: #fff;
+
+.portfolio__item-wrap {
   overflow: hidden; 
   position: relative;
   transition: all 0.3s ease-in-out;
 }
 
-.portfolio__item, .portfolio__item-wrap a {
+.portfolio__item-wrap a {
   display: block;
   cursor: pointer;
 }
- .portfolio__item .portfolio__item-wrap .portfolio__item-overlay {
+.portfolio__item-overlay {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 90%;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   background: url(../images/overlay-bg.png) repeat;
 } 
-.portfolio__item .portfolio__item-wrap .portfolio__link-icon {
+.portfolio__link-icon {
   display: block;
   color: #fff;
   height: 30px;
@@ -300,16 +331,16 @@ header .social li a:hover {
   margin-top: -15px;
 } 
 
-.portfolio__item .portfolio__item-meta {
+.portfolio__item-meta {
   padding: 18px;
 }
 
-.portfolio__item .portfolio__item-meta h5 {
+.portfolio__item-meta h5 {
   font: 14px/21px "opensans-bold", sans-serif;
   color: #fff;
 }
 
-.portfolio__item .portfolio__item-meta p {
+.portfolio__item-meta p {
   font: 12px/18px "opensans-light", sans-serif;
   color: #c6c7c7;
   margin-bottom: 0;
@@ -334,7 +365,31 @@ header .social li a:hover {
 .footer__wrapper {
   grid-area: footer;
 }
+.footer__go-top {
+  position: relative;
+  bottom: 175px;
+  left: 50%;
+  margin-left: -30px;
+}
+.footer__go-top a {
+  text-decoration: none;
+  border: 0 none;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: #525252;
 
+  transition: all 0.2s ease-in-out;
+
+  color: #fff;
+  font-size: 21px;
+  line-height: 60px;
+  border-radius: 100%;
+}
+
+.footer__go-top a:hover {
+  background-color: #0f9095;
+}
 footer .social {
   margin: 18px 0 30px 0;
   padding: 0;
@@ -367,8 +422,13 @@ footer .social li:first-child {
     height: 114px;
     margin-left: 12px;
  }
+ .about__wrapper {
+  grid-template-columns: 20% 60%;
+  grid-column-gap: 10px;
+}
 }
 /* mobile wide/ smaller tablets */
 @media only screen and (max-width: 767px) {
   .about__profile-pic { display: none; }
+  .scrolldown { display: none; }
 }

@@ -9,6 +9,11 @@ import Resume from "../components/Resume";
 import Portfolio from "../components/Portfolio";
 import Footer from "../components/Footer";
 
+// Smooths scroll behavior of anchor links
+if(typeof window !== 'undefined') {
+  require('smooth-scroll')('a[href*="#"]');
+}
+
 const IndexPage = () => (
   <div className="wrapper__main">
     <Header />

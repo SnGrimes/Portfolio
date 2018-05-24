@@ -1958,6 +1958,7 @@ footer .social li:first-child {
   font-size: 21px;
   line-height: 60px;
   border-radius: 100%;
+  text-align: center;
 }
 #go-top a:hover {
   background-color: #0f9095;
