@@ -3,7 +3,7 @@ import SocialLinks from "./SocialLinks";
 import { FaChevronCircleUp } from "react-icons/lib/fa";
 
 const Footer = () => (
-  <footer id="footer">
+  <footer id="footer" className="footer__wrapper">
     <div className="row">
       <div className="twelve columns">
         <SocialLinks />
