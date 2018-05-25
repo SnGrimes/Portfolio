@@ -8,10 +8,8 @@
 }
 
 body {
-  background: #fff;
-  font-family: 'opensans-regular', sans-serif;
-  font-weight: normal;
-  font-size: 15px;
+  background: #0f0f0f;
+  font: 15px "Open Sans", sans-serif;
   line-height: 30px;
   color: #838C95;
  -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
@@ -23,25 +21,15 @@ html {
 
 /* Typography */
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
   color: #313131;
- font-family: 'opensans-bold', sans-serif;
-  font-weight: normal;
 }
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
-h1 { font-size: 38px; line-height: 42px; margin-bottom: 12px; letter-spacing: -1px; }
-h2 { font-size: 28px; line-height: 36px; margin-bottom: 6px; }
-h3 { font-size: 22px; line-height: 30px; margin-bottom: 12px; }
-h4 { font-size: 20px; line-height: 30px; margin-bottom: 6px; }
-h5 { font-size: 18px; line-height: 30px; }
-h6 { font-size: 14px; line-height: 30px; }
-
 p { margin: 0 0 30px 0; }
 p img { margin: 0; }
 
 /* Prevent rendering problems with these tags in certain browswer */
-em { font: 15px/30px 'opensans-italic', sans-serif; }
-strong, b { font: 15px/30px 'opensans-bold', sans-serif; }
+em { font: italic 15px 'Open Sans', sans-serif; }
+strong, b { font: 700 15px 'Opens Sans', sans-serif; }
 small { font-size: 11px; line-height: inherit; }
 
 /* Links */
@@ -71,7 +59,7 @@ img {
 /* Buttons */
 button
  {
-   font: 16px/30px 'opensans-bold', sans-serif;
+   font: 16px 'Open Sans', sans-serif;
    background: #11ABB0;
    display: inline-block;
 	text-decoration: none;
@@ -91,7 +79,7 @@ button
 /* Primary navigation */
 
 .nav__wrapper {
-  font: 12px "opensans-bold", sans-serif;
+  font: 14px "Open Sans", sans-serif;
   width: 100%;
   text-transform: uppercase;
   letter-spacing: 2.5px;
@@ -193,7 +181,7 @@ transition: all 0.3s ease-in-out;
 }
 
 .banner__text h1 {
-  font: 90px/1.1em "opensans-bold", sans-serif;
+  font: 700 90px 'Open Sans', sans-serif;
   color: #fff;
   letter-spacing: -2px;
   margin: 0 auto 18px auto;
@@ -201,7 +189,7 @@ transition: all 0.3s ease-in-out;
 }
 
 .banner__text h3 {
-  font: 20px/2em "librebaskerville-regular", serif;
+  font: 20px "Libre Baskerville", serif;
   color: #dbdbdb;
   margin: 0 auto;
   width: 70%;
@@ -284,7 +272,7 @@ header .social li a:hover {
   margin-bottom: 36px;
 }
 .portfolio__wrapper h1 {
-  font: 15px/24px "opensans-semibold", sans-serif;
+  font: 15px "Open Sans", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
@@ -336,12 +324,12 @@ header .social li a:hover {
 }
 
 .portfolio__item-meta h5 {
-  font: 14px/21px "opensans-bold", sans-serif;
+  font: 14px "Open Sans", sans-serif;
   color: #fff;
 }
 
 .portfolio__item-meta p {
-  font: 12px/18px "opensans-light", sans-serif;
+  font: 12px "Open Sans", sans-serif;
   color: #c6c7c7;
   margin-bottom: 0;
 }
@@ -359,15 +347,102 @@ header .social li a:hover {
 /* Resume Component */
 .resume__wrapper {
   grid-area: resume;
+  background: #fff;
+  padding-top: 90px;
+  padding-bottom: 72px;
+  padding-left: 64px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: repeat(2, 50%);
+}
+.resume__wrapper h1 {
+  font: 700 18px "Open Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.resume__wrapper h1 span {
+  border-bottom: 3px solid #11abb0;
+  padding-bottom: 6px;
+}
+
+.resume__wrapper h3 {
+  font: 25px/30px "opensans-bold", sans-serif;
+}
+
+.work__wrapper {
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.work__info {
+  color: #6e7881;
+  margin-bottom: 18px;
+  margin-top: 9px;
+}
+
+.work__info span {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.work__date {
+  margin-top: 6px;
+}
+.work__header-col,
+.skills__header-col {
+  padding-top: 9px;
+  grid-column: 1;
+}
+.work__main-col,
+.skills__main-col {
+  padding-right: 10%;
+  grid-column: 2;
+}
+
+.skills__wrapper,
+.work__wrapper {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-column-gap: 30px;
+  justify-content: center; 
+}
+
+table {
+  font-size: 1.5em;
+  padding: 3px;
+  max-width: 400px;
+  color: #313131;
+  
+}
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid hsla(182, 82%, 38%, 0.42);
+  /* text-align: center; */
 }
 
 /* Footer Component */
-.footer__wrapper {
+footer {
   grid-area: footer;
-}
-.footer__go-top {
+  padding-top: 48px;
+  margin-bottom: 48px;
+  color: #303030;
+  /* font-size: 14px; */
+  text-align: center;
   position: relative;
-  bottom: 175px;
+}
+
+footer a {
+  color: #525252;
+}
+footer a:hover,
+footer a:focus {
+  color: #fff;
+}
+
+.footer__go-top {
+  position: absolute;
+  top: -24px;
   left: 50%;
   margin-left: -30px;
 }
@@ -385,6 +460,7 @@ header .social li a:hover {
   font-size: 21px;
   line-height: 60px;
   border-radius: 100%;
+  text-align: center;
 }
 
 .footer__go-top a:hover {
@@ -423,9 +499,12 @@ footer .social li:first-child {
     margin-left: 12px;
  }
  .about__wrapper {
-  grid-template-columns: 20% 60%;
-  grid-column-gap: 10px;
-}
+    grid-template-columns: 20% 60%;
+    grid-column-gap: 10px;
+  }
+  /* Resume Component */
+  .resume__wrapper h1 { font: 16px/24px;  }
+  .resume__main-col { padding-right: 5%; }
 }
 /* mobile wide/ smaller tablets */
 @media only screen and (max-width: 767px) {

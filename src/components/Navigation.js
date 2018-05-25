@@ -19,6 +19,11 @@ const Navigation = () => (
           Projects
         </a>
       </li>
+      <li>
+        <a className="nav__full-item" href="#resume">
+          Resume
+        </a>
+      </li>
     </ul>
   </nav>
 );

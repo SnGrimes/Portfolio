@@ -3,7 +3,7 @@ import { FaChevronCircleDown } from "react-icons/lib/fa";
 
 const ScrollDown = () => (
   <p className="scrolldown">
-    <a className="smoothscroll" href="#about">
+    <a href="#about">
       <FaChevronCircleDown />
     </a>
   </p>
