@@ -77,7 +77,9 @@ button
 }
 
 /* Primary navigation */
-
+#nav-toggle, label {
+  opacity: 0;
+}
 .nav__wrapper {
   font: 14px "Open Sans", sans-serif;
   width: 100%;
@@ -95,7 +97,7 @@ button
 
 .nav__full {
   display: grid;
-  grid-template-columns: repeat(3, 120px) 10%;
+  grid-template-columns: repeat(4, 120px) 10%;
   justify-content: center;
 }
 
@@ -268,7 +270,7 @@ header .social li a:hover {
   display: grid;
   justify-content: center;
   grid-column-gap: 30px;
-  grid-template-columns: repeat(4, 20%);
+  grid-template-columns: repeat(3, 20%);
   margin-bottom: 36px;
 }
 .portfolio__wrapper h1 {
@@ -295,7 +297,7 @@ header .social li a:hover {
   left: 0;
   top: 0;
   width: 100%;
-  height: 90%;
+  height: 94%;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   background: url(../images/overlay-bg.png) repeat;
@@ -489,25 +491,143 @@ footer .social li:first-child {
 /*                            Media queries                             */
 /* ---------------------------------------------------------------------*/                      
 
+
+/* Screen width less than 1024px */
+@media only screen and (max-width: 1024px) {
+  /* Header component */
+  .banner__text h1 {
+    font-size: 80px;
+    letter-spacing: -1px;
+  }
+  /* Portfolio component */
+  .portfolio__item-overlay {
+    height: 93%;
+  }
+  .portfolio__items {
+    grid-template-columns: repeat(3, 30%);
+  }
+  /* About component */
+  .about__wrapper {
+    grid-template-columns: 25% 70%;
+  }
+}
+
 /* Screen width less than 900px */
 
 @media only screen and (max-width: 900px) {
+  /* Header component */
+
   /* About Component */
   .about__profile-pic {
-    width: 114px;
-    height: 114px;
+    width: 150px;
+    height: 150px;
     margin-left: 12px;
  }
  .about__wrapper {
-    grid-template-columns: 20% 60%;
+    grid-template-columns: 25% 70%;
     grid-column-gap: 10px;
   }
+
+  /* Portfolio component */
+
+  
+.portfolio__item-meta {
+  padding: 10px;
+}
+
+.portfolio__item-meta h5 {
+  font-size: 15px;
+}
+
+.portfolio__item-meta p {
+  font-size: 13px;
+}
+  .portfolio__item-overlay {
+    height: 92%;
+  }
   /* Resume Component */
-  .resume__wrapper h1 { font: 16px/24px;  }
+  .resume__wrapper h1 { font: 16px;  }
   .resume__main-col { padding-right: 5%; }
 }
+
 /* mobile wide/ smaller tablets */
 @media only screen and (max-width: 767px) {
+  .nav__wrapper {
+    font-size: 12px;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
+  #nav-toggle {
+    opacity: 0;
+  }
+
+  #nav-toggle, label {
+    position: fixed;
+    top:0;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+  }
+  label {
+    opacity: 1;
+    display: block;
+    color: #fff;
+    background-color: #CC5200;
+    border: none;
+    padding: 15px 0;
+    text-align: center;
+    cursor: pointer;
+  }
+  label:hover {
+    background-color: #fff;
+  }
+   #nav-toggle ~ .nav__full {
+    display:none;
+  }
+  #nav-toggle:checked ~ .nav__full {
+    display: block;
+  }
+
+  /* display menu panel */
+  .nav__full {
+    display: block;
+    padding: 30px 20px 48px 20px;
+    background: #1f2024;
+    margin: 0 30px;
+    width: 30vw;
+    clear: both;
+    position: relative;
+    right: 0;
+    top: 50px;
+    float: right;
+  }
+  .nav__full li {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 4%;
+    text-align: left;
+    border-bottom: 1px solid #2D2E34;
+    border-bottom-style: dotted;
+  }
+
+  .nav__full li a {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin: 12px 0;
+    line-height: 16px; 
+    border: none;
+  } 
+  
+
   .about__profile-pic { display: none; }
   .scrolldown { display: none; }
+}
+
+/* Mobile narrow */
+@media only screen and (max-width: 480px) {
+
 }

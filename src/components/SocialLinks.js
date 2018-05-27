@@ -5,22 +5,22 @@ import {
   FaLinkedinSquare,
   FaCodepen
 } from "react-icons/lib/fa";
-// https://gorangajic.github.io/react-icons/fa.html
+
 
 const SocialLinks = () => (
   <ul className="social">
     <li>
-      <a href="#">
+      <a href="https://github.com/SnGrimes">
         <FaGithub />
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="https://www.linkedin.com/in/shantia-grimes-farmer-87332b79/">
         <FaLinkedinSquare />
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="https://codepen.io/abreeman/">
         <FaCodepen />
       </a>
     </li>

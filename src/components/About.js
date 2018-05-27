@@ -11,15 +11,15 @@ const About = () => (
       <div className="about__column-2">
         <h2>About Me</h2>
         <p>
-        I am seeking an entry level position as a frontend web developer. I have several years' experience with HTML and CSS and have a passion for web code. I graduated cum laude with a degree in Arts and Technology from The University of Texas at Dallas. After graduation and discovering that the movie and videogame animation fields no longer appealed to me, I decided to learn as much as possible about web development. Since 2004 I have become proficient with web coding and created a websites using HTML, CSS and Javascript. I am passionate about the Internet and would like to contribute to it.
-        I enjoy solving problems. I always look for faster, more efficient methods to reach the best results and I bring this mindset to my development projects. I look at problems from different viewpoints and consider several approaches. The more details I can learn about a language or browser the better.  
-        My strengths lie in coding, especially frontend code. Recreating mock-up designs in HTML/CSS is easy for me. I also actively seek new knowledge. After discovering a Javascript-based animation library called Greensock, I plan to learn as much as possible about it because of my love for the art of animation.
-        </p>
-        <p>
+        I am a self taught web developer and have been using CSS and HTML since 2004 and have spent my free time teaching myself JavaScript. I enjoy solving problems. I always look for faster, more efficient methods to reach the best results and I bring this mindset to my development projects. I look at problems from different viewpoints and consider several approaches. The more details I can learn about a language or browser the better. Re-creating mock-up designs in HTML/CSS is easy for me. I am also actively seeking new knowledge.</p>
+
+        <p>Recently, I served as the project manager for a remote developer project as part of Chingu Cohorts Voyage 4. It was first time joining a Chingu cohort and it was an honor to be selected as a project manager in my first voyage. It was a great way to learn how to work on an app as a team and I learned a lot.</p>        
+        <p>I am currently seeking a full-time front end developer position where I can put me skills to use and work with a team of like minded developers.</p>
+        {/* <p>
           <button className="about__button">
             <FaCloudDownload /> Download Resume
           </button>
-        </p>              
+        </p>               */}
       </div>
   </section>
 );

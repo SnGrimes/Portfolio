@@ -1,10 +1,10 @@
 import React from "react";
 import { FaPlus, FaTag } from "react-icons/lib/fa";
 
-import Coffee from "../assets/images/portfolio/coffee.jpg";
-import Console from "../assets/images/portfolio/console.jpg";
-import Judah from "../assets/images/portfolio/judah.jpg";
-import IntoTheLight from "../assets/images/portfolio/into-the-light.jpg";
+import Tamarah from "../assets/images/portfolio/tamarah.png";
+import Responsive from "../assets/images/portfolio/responsive.png";
+import Weather from "../assets/images/portfolio/weatherapp.png";
+import Gecko from "../assets/images/portfolio/geckofit.png";
 
 const Portfolio = () => (
   <section id="portfolio" className="portfolio__wrapper">
@@ -12,12 +12,12 @@ const Portfolio = () => (
       <div className="portfolio__items">
           <div className="portfolio__item">
             <div className="portfolio__item-wrap">
-              <a href="#modal-01" title="">
-                <img alt="" src={Coffee} />
+              <a href="Testbed/Weatherapp/index.html" title="Weather App">
+                <img alt="Weather App" src={Weather} />
                 <div className="portfolio__item-overlay">
                   <div className="portfolio__item-meta">
-                    <h5>Coffee</h5>
-                    <p>Illustrration</p>
+                    <h5>Weather App</h5>
+                    <p>CSS, HTML, Javascript, PHP, Openweathermap API</p>
                   </div>
                 </div>
                 <div className="portfolio__link-icon">
@@ -29,12 +29,12 @@ const Portfolio = () => (
 
           <div className="portfolio__item">
             <div className="portfolio__item-wrap">
-              <a href="#modal-02" title="">
-                <img alt="" src={Console} />
+              <a href="http://geckofit.surge.sh/" title="Gecko Fit App">
+                <img alt="Gecko Fit App" src={Gecko} />
                 <div className="portfolio__item-overlay">
                   <div className="portfolio__item-meta">
-                    <h5>Console</h5>
-                    <p>Web Development</p>
+                    <h5>Gecko Fit Nutrition App</h5>
+                    <p>CSS, HTML and React. Created during Chingu Voyage 4.</p>
                   </div>
                 </div>
                 <div className="portfolio__link-icon">
@@ -46,29 +46,12 @@ const Portfolio = () => (
 
           <div className="portfolio__item">
             <div className="portfolio__item-wrap">
-              <a href="#modal-03" title="">
-                <img alt="" src={Judah} />
+              <a href="http://www.tamarahesi.com" title="Ta'Marah Esi">
+                <img alt="Tamarah Esi site" src={Tamarah} />
                 <div className="portfolio__item-overlay">
                   <div className="portfolio__item-meta">
-                    <h5>Judah</h5>
-                    <p>Webdesign</p>
-                  </div>
-                </div>
-                <div className="portfolio__link-icon">
-                  <FaPlus />
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div className="portfolio__item">
-            <div className="portfolio__item-wrap">
-              <a href="#modal-04" title="">
-                <img alt="" src={IntoTheLight} />
-                <div className="portfolio__item-overlay">
-                  <div className="portfolio__item-meta">
-                    <h5>Into The Light</h5>
-                    <p>Photography</p>
+                    <h5>Ta'Marah Esi Musician site</h5>
+                    <p>Wordpress site for a local musician</p>
                   </div>
                 </div>
                 <div className="portfolio__link-icon">
@@ -78,206 +61,6 @@ const Portfolio = () => (
             </div>
           </div>
       </div>
-
-      {/* <div id="modal-01" className="popup-modal mfp-hide">
-        <img
-          className="scale-with-grid"
-          src="images/portfolio/modals/m-coffee.jpg"
-          alt=""
-        />
-
-        <div className="description-box">
-          <h4>Coffee Cup</h4>
-          <p>
-            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-            lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-            sem nibh id elit.
-          </p>
-          <span className="categories">
-            <FaTag /> Branding, Webdesign
-          </span>
-        </div>
-
-        <div className="link-box">
-          <a href="http://www.behance.net">Details</a>
-          <a className="popup-modal-dismiss">Close</a>
-        </div>
-      </div>
-
-      <div id="modal-02" className="popup-modal mfp-hide">
-        <img
-          className="scale-with-grid"
-          src="images/portfolio/modals/m-console.jpg"
-          alt=""
-        />
-
-        <div className="description-box">
-          <h4>Console</h4>
-          <p>
-            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-            lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-            sem nibh id elit.
-          </p>
-          <span className="categories">
-            <FaTag />Branding, Web Development
-          </span>
-        </div>
-
-        <div className="link-box">
-          <a href="http://www.behance.net">Details</a>
-          <a className="popup-modal-dismiss">Close</a>
-        </div>
-      </div>
-
-      <div id="modal-03" className="popup-modal mfp-hide">
-        <img
-          className="scale-with-grid"
-          src="images/portfolio/modals/m-judah.jpg"
-          alt=""
-        />
-
-        <div className="description-box">
-          <h4>Judah</h4>
-          <p>
-            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-            lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-            sem nibh id elit.
-          </p>
-          <span className="categories">
-            <FaTag />Branding
-          </span>
-        </div>
-
-        <div className="link-box">
-          <a href="http://www.behance.net">Details</a>
-          <a className="popup-modal-dismiss">Close</a>
-        </div>
-      </div>
-
-      <div id="modal-04" className="popup-modal mfp-hide">
-        <img
-          className="scale-with-grid"
-          src="images/portfolio/modals/m-intothelight.jpg"
-          alt=""
-        />
-
-        <div className="description-box">
-          <h4>Into the Light</h4>
-          <p>
-            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-            lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-            sem nibh id elit.
-          </p>
-          <span className="categories">
-            <FaTag />Photography
-          </span>
-        </div>
-
-        <div className="link-box">
-          <a href="http://www.behance.net">Details</a>
-          <a className="popup-modal-dismiss">Close</a>
-        </div>
-      </div>
-
-      <div id="modal-05" className="popup-modal mfp-hide">
-        <img
-          className="scale-with-grid"
-          src="images/portfolio/modals/m-farmerboy.jpg"
-          alt=""
-        />
-
-        <div className="description-box">
-          <h4>Farmer Boy</h4>
-          <p>
-            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-            lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-            sem nibh id elit.
-          </p>
-          <span className="categories">
-            <FaTag />Branding, Webdesign
-          </span>
-        </div>
-
-        <div className="link-box">
-          <a href="http://www.behance.net">Details</a>
-          <a className="popup-modal-dismiss">Close</a>
-        </div>
-      </div>
-
-      <div id="modal-06" className="popup-modal mfp-hide">
-        <img
-          className="scale-with-grid"
-          src="images/portfolio/modals/m-girl.jpg"
-          alt=""
-        />
-
-        <div className="description-box">
-          <h4>Girl</h4>
-          <p>
-            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-            lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-            sem nibh id elit.
-          </p>
-          <span className="categories">
-            <FaTag />Photography
-          </span>
-        </div>
-
-        <div className="link-box">
-          <a href="http://www.behance.net">Details</a>
-          <a className="popup-modal-dismiss">Close</a>
-        </div>
-      </div>
-
-      <div id="modal-07" className="popup-modal mfp-hide">
-        <img
-          className="scale-with-grid"
-          src="images/portfolio/modals/m-origami.jpg"
-          alt=""
-        />
-
-        <div className="description-box">
-          <h4>Origami</h4>
-          <p>
-            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-            lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-            sem nibh id elit.
-          </p>
-          <span className="categories">
-            <FaTag />Branding, Illustration
-          </span>
-        </div>
-
-        <div className="link-box">
-          <a href="http://www.behance.net">Details</a>
-          <a className="popup-modal-dismiss">Close</a>
-        </div>
-      </div>
-
-      <div id="modal-08" className="popup-modal mfp-hide">
-        <img
-          className="scale-with-grid"
-          src="images/portfolio/modals/m-retrocam.jpg"
-          alt=""
-        />
-
-        <div className="description-box">
-          <h4>Retrocam</h4>
-          <p>
-            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-            lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-            sem nibh id elit.
-          </p>
-          <span className="categories">
-            <i className="fa fa-tag" />Webdesign, Photography
-          </span>
-        </div>
-
-        <div className="link-box">
-          <a href="http://www.behance.net">Details</a>
-          <a className="popup-modal-dismiss">Close</a>
-        </div>
-      </div> */} 
   </section>
 );
 
