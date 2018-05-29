@@ -369,7 +369,7 @@ header .social li a:hover {
 }
 
 .resume__wrapper h3 {
-  font: 25px/30px "opensans-bold", sans-serif;
+  font: 25px "opensans-bold", sans-serif;
 }
 
 .work__wrapper {
@@ -492,7 +492,8 @@ footer .social li:first-child {
 /* ---------------------------------------------------------------------*/                      
 
 
-/* Screen width less than 1024px */
+/* Screen width less than 1024px 
+------------------------------------------------------------*/
 @media only screen and (max-width: 1024px) {
   /* Header component */
   .banner__text h1 {
@@ -520,7 +521,7 @@ footer .social li:first-child {
   /* About Component */
   .about__profile-pic {
     width: 150px;
-    height: 150px;
+    height: 180px;
     margin-left: 12px;
  }
  .about__wrapper {
@@ -550,7 +551,8 @@ footer .social li:first-child {
   .resume__main-col { padding-right: 5%; }
 }
 
-/* mobile wide/ smaller tablets */
+/* mobile wide/ smaller tablets 
+--------------------------------------------------------------*/
 @media only screen and (max-width: 767px) {
   .nav__wrapper {
     font-size: 12px;
@@ -561,27 +563,25 @@ footer .social li:first-child {
 
   #nav-toggle {
     opacity: 0;
+    display: none; 
   }
 
-  #nav-toggle, label {
-    position: fixed;
-    top:0;
-    right: 20px;
-    width: 48px;
-    height: 48px;
-  }
   label {
     opacity: 1;
     display: block;
     color: #fff;
     background-color: #CC5200;
-    border: none;
+    right: 20px;
+    position: fixed;
     padding: 15px 0;
     text-align: center;
     cursor: pointer;
+    width: 48px;
+    height: 48px;
   }
   label:hover {
     background-color: #fff;
+    color: #000;
   }
    #nav-toggle ~ .nav__full {
     display:none;
@@ -622,12 +622,97 @@ footer .social li:first-child {
     border: none;
   } 
   
-
   .about__profile-pic { display: none; }
   .scrolldown { display: none; }
+  /* Header component */
+  .banner {
+    padding-bottom: 12px;
+    padding-top: 6px;
+  }
+  .banner__text h1 {font-size: 3em;}
+  .banner__text hr {
+    width: 80%;
+    margin: 18px auto;
+  }
+
+  .social {
+    margin: 18px 0 24px 0;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  /* About component */
+  .about__wrapper { 
+    grid-template-columns: 0% 90%;
+    grid-column-gap: 0;
+  }
+  .about__column-2 {
+    padding-right: 0;
+  }
+
+  /* Resume component */
+  .resume__wrapper {
+    padding-left: 0;
+  }
+  .skills__wrapper,
+  .work__wrapper {
+    grid-template-columns: 0% 90%;
+    grid-template-rows: 20% 80%;
+    grid-column-gap: 0;
+    justify-content: center; 
+  }
+  .work__header-col,
+  .skills__header-col {
+    padding-top: 9px;
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+    padding-bottom: 24px;
+  }
+  .work__main-col,
+  .skills__main-col {
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 24px;
+    grid-row: 2;
+  }
+  .skills__main-col {
+    padding: 0 50px 0 100px;
+  }
+  .work__wrapper h1 {
+    letter-spacing: 3px;
+  }
+  .work__main-col h3, .work__info {
+    text-align: center;
+  }
+
+  /* Portfolio component */
+  .portfolio__items {
+    grid-column-gap: 0;
+    grid-template-columns: 65%;
+    grid-template-rows: repeat(3, 20%);
+    margin-bottom: 36px;
+  }
+  .portfolio__item-overlay {
+    height: 93%;
+  }
 }
 
-/* Mobile narrow */
-@media only screen and (max-width: 480px) {
 
+
+/* Mobile narrow
+-------------------------------------------------- */
+@media only screen and (max-width: 480px) {
+  /* Resume component */
+  .skills__main-col {
+    padding: 0 10px 0 10px;
+  }
+  /* Portfolio component */
+  .portfolio__items {
+    grid-template-columns: 80%;
+  }
+  .portfolio__item-overlay {
+    height: 92%;
+  }
+  
 }

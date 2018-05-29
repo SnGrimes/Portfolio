@@ -3,7 +3,7 @@ import React from "react";
 const Navigation = () => (
   <nav id="nav-wrap" className="nav__wrapper">
     {/* <a className="nav__mobile-btn" href="#nav-wrap" /> */}
-    <label for="nav-toggle">Menu</label>
+    <label htmlFor="nav-toggle">Menu</label>
     <input type="checkbox" id="nav-toggle"></input>
     
     <ul id="nav" className="nav__full">
