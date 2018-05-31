@@ -14,6 +14,16 @@ if(typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
 }
 
+window.onscroll = () => {
+  const nav = document.getElementById('nav');
+  if(window.pageYOffset >= 1000) {    
+    nav.style.backgroundColor = "#11abb0";
+  }
+  else {
+    nav.style.backgroundColor = "transparent";
+  }
+  //console.log(`page is currently at ${window.pageYOffset} pixels`);
+}
 const IndexPage = () => (
   <div className="wrapper__main">
     <Header />
