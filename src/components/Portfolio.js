@@ -2,7 +2,7 @@ import React from "react";
 import { FaPlus, FaTag } from "react-icons/lib/fa";
 
 import Tamarah from "../assets/images/portfolio/tamarah.png";
-import Responsive from "../assets/images/portfolio/responsive.png";
+import Drums from "../assets/images/portfolio/drums.png";
 import Weather from "../assets/images/portfolio/weatherapp.png";
 import Gecko from "../assets/images/portfolio/geckofit.png";
 
@@ -44,6 +44,22 @@ const Portfolio = () => (
             </div>
           </div>
 
+          <div className="portfolio__item">
+            <div className="portfolio__item-wrap">
+              <a href="Testbed/Drum Kit/index.html" title="Drum Kit">
+                <img alt="Drum Kit" src={Drums} />
+                <div className="portfolio__item-overlay">
+                  <div className="portfolio__item-meta">
+                    <h5>Drum Kit</h5>
+                    <p>Animated Drum Kit created using GSAP animation library. Audio from JavaScript 30</p>
+                  </div>
+                </div>
+                <div className="portfolio__link-icon">
+                  <FaPlus />
+                </div>
+              </a>
+            </div>
+          </div>
           <div className="portfolio__item">
             <div className="portfolio__item-wrap">
               <a href="http://www.tamarahesi.com" title="Ta'Marah Esi">
